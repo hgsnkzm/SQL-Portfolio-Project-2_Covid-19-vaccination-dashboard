@@ -23,8 +23,8 @@ I mainly used following columns :
 * `people_vaccinated`	Total number of people who received at least one vaccine dose
 * `people_fully_vaccinated`	Total number of people who received all doses prescribed by the vaccination protocol
 * `total_boosters`	Total number of COVID-19 vaccination booster doses administered (doses administered beyond the number prescribed by the vaccination protocol)
-* `new_vaccinations`	New COVID-19 vaccination doses administered (only calculated for consecutive days)
-also, I used the data of countries' gdp per capita as of 2020 from [here](https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?end=2020&most_recent_value_desc=false&start=1960&view=chart)
+* `new_vaccinations`	New COVID-19 vaccination doses administered (only calculated for consecutive days
+* also, I used the data of countries' gdp per capita as of 2020 from [here](https://data.worldbank.org/indicator/NY.GDP.PCAP.CD?end=2020&most_recent_value_desc=false&start=1960&view=chart)
 
 
 ## Data Visualization
