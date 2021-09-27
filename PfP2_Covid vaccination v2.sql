@@ -1,4 +1,3 @@
-
 -- 1. Global Numbers
 -- 1-a. Showing total vaccination count and percentage of vaccination per population of global as of September 16, 2021.
 
@@ -69,6 +68,22 @@ Where continent is not NULL
 )
 SELECT *, (RunningTotalOfNewVaccination/population)*100 as PercentRunningTotalOFNewVaccination
 From PercentRunningTotal
+;
+
+-- 3-f, Showing percentage of running total of new cases and new deaths per population, and percentage of first dose count and fully vaccinated count
+
+WITH PercentRunningTotalofNewDeatshs (location, population, date, new_cases, RunningTotalOfNewCases, new_deaths, RunningTotalOfNewDeaths, PercentFirstDose, PercentFullyVaccinaetd)
+as
+(
+SELECT location, population, date, new_cases, sum(new_cases) OVER (PARTITION BY location ORDER BY location, date) as RunningTotalOfNewCases
+, new_deaths, sum(new_deaths) OVER (PARTITION BY location ORDER BY location, date) as RunningTotalOfNewDeaths
+, (people_vaccinated/population)*100 as PercentFirstDose, (people_fully_vaccinated/population)*100 as PercentFullyVaccinated
+FROM CovidVac0916
+WHERE continent is not NULL
+-- ORDER BY 1, 3
+)
+SELECT *, (RunningTotalOfNewCases/population)*100 as PercentRunningTotalOfNewCases, (RunningTotalOfNewDeaths/population)*100 as PercentRunningTotalOfNewDeaths
+From PercentRunningTotalofNewDeatshs
 ;
 
 
