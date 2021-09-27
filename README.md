@@ -1,5 +1,5 @@
 # SQL-Portfolio-Project-2_Covid-19-vaccination-dashboard
-## Project Perpose
+## Project Purpose
 * Looking at global Covid-19 vaccinations data and comparing those numbers/percentages between countries or continent, and visualizing them. Aiming to show trends or comparison of Covid-19 deaths data.
 * Also, comparing the situation of vaccinations of each country and GDP per captita, and finding the correlation between them.
 
@@ -7,6 +7,7 @@
 This project uses following languages/tools:
 * SQL
 * Tableau
+* SQLite
 
 ## Data
 I used data from [here](https://ourworldindata.org/covid-vaccinations).
