@@ -5,9 +5,8 @@
 
 ## Tools
 This project uses following languages/tools:
-* SQL
-* Tableau
-* SQLite
+* DB Browser for SQLite Version 3.12.2
+* Tableau Public
 
 ## Data
 I used data from [here](https://ourworldindata.org/covid-vaccinations).
